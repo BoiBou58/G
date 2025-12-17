@@ -48,23 +48,23 @@
         /* Styling for the element cell */
         .element-cell {
             /* OLED Styling: Pure Black Background */
-            background-color: #000000; 
+            background-color: #000000;
             border: 2px solid; /* Border color is defined by category class */
-            
+           
             /* Cell structure and transitions */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            aspect-ratio: 1 / 1; 
+            aspect-ratio: 1 / 1;
             cursor: pointer;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             border-radius: 6px;
-            font-size: 0.75rem; 
+            font-size: 0.75rem;
             line-height: 1;
             padding: 2px;
             font-weight: 500;
-            position: relative; 
+            position: relative;
             z-index: 1; /* Default Z-index */
         }
 
@@ -73,7 +73,7 @@
             transform: scale(1.08); /* Pop up effect */
             z-index: 10;
             /* Box shadow to create a strong, colored edge glow effect on hover */
-            box-shadow: 0 0 15px 3px var(--element-glow-color); 
+            box-shadow: 0 0 15px 3px var(--element-glow-color);
         }
 
         /* Glowing Effect */
@@ -87,7 +87,7 @@
             height: 50%;
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
-            pointer-events: none; 
+            pointer-events: none;
             border-radius: 50%;
             filter: blur(10px);
             z-index: 0;
@@ -111,7 +111,7 @@
         .modal-content-card {
             background-color: #0d0d0d; /* Slightly off-black for separation */
         }
-        
+       
         /* Inner cell content styling */
         .element-symbol { font-size: 1.5rem; font-weight: 900; }
         .element-name { font-size: 0.5rem; font-weight: 300; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -140,7 +140,7 @@
             <button class="absolute top-4 right-4 text-3xl font-light text-gray-400 hover:text-white transition" onclick="closeModal()">
                 &times;
             </button>
-            
+           
             <div id="modal-body" class="grid md:grid-cols-3 gap-8">
                 <!-- Main Element Card (Col 1) -->
                 <div id="modal-main-card" class="md:col-span-1 rounded-lg p-6 flex flex-col items-center justify-center text-center border-2" style="background-color: #000000;">
@@ -180,7 +180,7 @@
                             <dt class="font-medium">Full:</dt>
                             <dd id="modal-config-full" class="font-mono text-sm text-right overflow-x-auto"></dd>
                         </div>
-                        
+                       
                         <div class="flex justify-between border-b border-gray-700 pt-4 pb-1">
                             <dt class="font-semibold">Discovered By:</dt>
                             <dd id="modal-discoverer" class="font-light text-right"></dd>
@@ -213,7 +213,7 @@
             { number: 8, symbol: "O", name: "Oxygen", mass: 15.999, category: "nonmetal", period: 2, group: 16, config: {abbr: "[He] 2s² 2p⁴", full: "1s² 2s² 2p⁴"}, density: "1.429 g/L", melt: "-218.4 °C", boil: "-183.0 °C", discoverer: "Joseph Priestley", state: "Gas", summary: "Essential for respiration and combustion, making up about 21% of Earth's atmosphere." },
             { number: 9, symbol: "F", name: "Fluorine", mass: 18.998, category: "halogen", period: 2, group: 17, config: {abbr: "[He] 2s² 2p⁵", full: "1s² 2s² 2p⁵"}, density: "1.696 g/L", melt: "-219.6 °C", boil: "-188.1 °C", discoverer: "Henri Moissan", state: "Gas", summary: "The most chemically reactive and electronegative element, highly toxic." },
             { number: 10, symbol: "Ne", name: "Neon", mass: 20.180, category: "noble-gas", period: 2, group: 18, config: {abbr: "[He] 2s² 2p⁶", full: "1s² 2s² 2p⁶"}, density: "0.9002 g/L", melt: "-248.59 °C", boil: "-246.08 °C", discoverer: "William Ramsay", state: "Gas", summary: "A colorless, odorless, inert gas that glows a bright red-orange when electrified." },
-            
+           
             // Period 3
             { number: 11, symbol: "Na", name: "Sodium", mass: 22.990, category: "alkali-metal", period: 3, group: 1, config: {abbr: "[Ne] 3s¹", full: "1s² 2s² 2p⁶ 3s¹"}, density: "0.968 g/cm³", melt: "97.72 °C", boil: "883 °C", discoverer: "Humphry Davy", state: "Solid", summary: "A soft, silver-white, highly reactive metal that floats on water." },
             { number: 12, symbol: "Mg", name: "Magnesium", mass: 24.305, category: "alkaline-earth", period: 3, group: 2, config: {abbr: "[Ne] 3s²", full: "1s² 2s² 2p⁶ 3s²"}, density: "1.738 g/cm³", melt: "650 °C", boil: "1090 °C", discoverer: "Joseph Black", state: "Solid", summary: "A light, structural metal used in alloys and essential for plant and animal life." },
@@ -223,7 +223,7 @@
             { number: 16, symbol: "S", name: "Sulfur", mass: 32.06, category: "nonmetal", period: 3, group: 16, config: {abbr: "[Ne] 3s² 3p⁴", full: "1s² 2s² 2p⁶ 3s² 3p⁴"}, density: "2.07 g/cm³", melt: "115.21 °C", boil: "444.6 °C", discoverer: "Ancient", state: "Solid", summary: "A bright yellow crystalline solid, used primarily in fertilizers and gunpowder." },
             { number: 17, symbol: "Cl", name: "Chlorine", mass: 35.45, category: "halogen", period: 3, group: 17, config: {abbr: "[Ne] 3s² 3p⁵", full: "1s² 2s² 2p⁶ 3s² 3p⁵"}, density: "3.2 g/L", melt: "-101.5 °C", boil: "-34.04 °C", discoverer: "Carl Wilhelm Scheele", state: "Gas", summary: "A highly toxic, greenish-yellow gas, widely used as a disinfectant and bleaching agent." },
             { number: 18, symbol: "Ar", name: "Argon", mass: 39.948, category: "noble-gas", period: 3, group: 18, config: {abbr: "[Ne] 3s² 3p⁶", full: "1s² 2s² 2p⁶ 3s² 3p⁶"}, density: "1.784 g/L", melt: "-189.3 °C", boil: "-185.8 °C", discoverer: "Lord Rayleigh", state: "Gas", summary: "A colorless, odorless, inert gas used in lighting and welding." },
-            
+           
             // Period 4 (Including Transition Metals)
             { number: 19, symbol: "K", name: "Potassium", mass: 39.098, category: "alkali-metal", period: 4, group: 1, config: {abbr: "[Ar] 4s¹", full: "[Ne] 3s² 3p⁶ 4s¹"}, density: "0.89 g/cm³", melt: "63.38 °C", boil: "759 °C", discoverer: "Humphry Davy", state: "Solid", summary: "A soft, silver-white metal that reacts violently with water; essential nutrient." },
             { number: 20, symbol: "Ca", name: "Calcium", mass: 40.078, category: "alkaline-earth", period: 4, group: 2, config: {abbr: "[Ar] 4s²", full: "[Ne] 3s² 3p⁶ 4s²"}, density: "1.55 g/cm³", melt: "842 °C", boil: "1484 °C", discoverer: "Humphry Davy", state: "Solid", summary: "A soft, gray alkaline earth metal, essential for bones, teeth, and shells." },
@@ -234,4 +234,334 @@
             { number: 25, symbol: "Mn", name: "Manganese", mass: 54.938, category: "transition-metal", period: 4, group: 7, config: {abbr: "[Ar] 3d⁵ 4s²", full: "[Ne] 3s² 3p⁶ 3d⁵ 4s²"}, density: "7.21 g/cm³", melt: "1246 °C", boil: "2061 °C", discoverer: "Carl Wilhelm Scheele", state: "Solid", summary: "A brittle, hard metal, often alloyed with steel." },
             { number: 26, symbol: "Fe", name: "Iron", mass: 55.845, category: "transition-metal", period: 4, group: 8, config: {abbr: "[Ar] 3d⁶ 4s²", full: "[Ne] 3s² 3p⁶ 3d⁶ 4s²"}, density: "7.874 g/cm³", melt: "1538 °C", boil: "2862 °C", discoverer: "Ancient", state: "Solid", summary: "The most common element by mass on Earth, essential for steel production." },
             { number: 27, symbol: "Co", name: "Cobalt", mass: 58.933, category: "transition-metal", period: 4, group: 9, config: {abbr: "[Ar] 3d⁷ 4s²", full: "[Ne] 3s² 3p⁶ 3d⁷ 4s²"}, density: "8.90 g/cm³", melt: "1495 °C", boil: "2927 °C", discoverer: "Georg Brandt", state: "Solid", summary: "A hard, ferromagnetic, silver-white metal used in magnetic and high-strength alloys." },
-            { number: 28, symbol: "Ni", name: "Nickel", mass: 58.693, category: "transition-metal", period: 4, group: 10, config: {abbr: "[Ar] 3d⁸ 4s²", full: "[Ne] 3s² 3p⁶ 3d⁸ 4s²"}, density: "8.908 g/cm³", melt: "1455 °C", boil: "2913 °C", discoverer: "Axel Fredrik Cronstedt", state: "Solid", summary: "A silvery-white, hard metal, resistant to corrosion and used extensively in alloys
+            { number: 28, symbol: "Ni", name: "Nickel", mass: 58.693, category: "transition-metal", period: 4, group: 10, config: {abbr: "[Ar] 3d⁸ 4s²", full: "[Ne] 3s² 3p⁶ 3d⁸ 4s²"}, density: "8.908 g/cm³", melt: "1455 °C", boil: "2913 °C", discoverer: "Axel Fredrik Cronstedt", state: "Solid", summary: "A silvery-white, hard metal, resistant to corrosion and used extensively in alloys." },
+            { number: 29, symbol: "Cu", name: "Copper", mass: 63.546, category: "transition-metal", period: 4, group: 11, config: {abbr: "[Ar] 3d¹⁰ 4s¹", full: "[Ne] 3s² 3p⁶ 3d¹⁰ 4s¹"}, density: "8.96 g/cm³", melt: "1084.6 °C", boil: "2567 °C", discoverer: "Ancient", state: "Solid", summary: "A soft, malleable metal with very high thermal and electrical conductivity." },
+            { number: 30, symbol: "Zn", name: "Zinc", mass: 65.38, category: "transition-metal", period: 4, group: 12, config: {abbr: "[Ar] 3d¹⁰ 4s²", full: "[Ne] 3s² 3p⁶ 3d¹⁰ 4s²"}, density: "7.14 g/cm³", melt: "419.5 °C", boil: "907 °C", discoverer: "Andreas Sigismund Marggraf", state: "Solid", summary: "A medium-reactive metal used in galvanization to prevent rust and in alloys like brass." },
+            { number: 31, symbol: "Ga", name: "Gallium", mass: 69.723, category: "post-transition", period: 4, group: 13, config: {abbr: "[Ar] 3d¹⁰ 4s² 4p¹", full: "[Ne] 3s² 3p⁶ 3d¹⁰ 4s² 4p¹"}, density: "5.904 g/cm³", melt: "29.76 °C", boil: "2204 °C", discoverer: "Paul Émile Lecoq de Boisbaudran", state: "Solid", summary: "A soft, silvery metal that melts just above room temperature (in your hand)." },
+            { number: 32, symbol: "Ge", name: "Germanium", mass: 72.63, category: "metalloid", period: 4, group: 14, config: {abbr: "[Ar] 3d¹⁰ 4s² 4p²", full: "[Ne] 3s² 3p⁶ 3d¹⁰ 4s² 4p²"}, density: "5.323 g/cm³", melt: "938.2 °C", boil: "2833 °C", discoverer: "Clemens Winkler", state: "Solid", summary: "A lustrous, hard, grayish-white metalloid, an important semiconductor material." },
+            { number: 33, symbol: "As", name: "Arsenic", mass: 74.922, category: "metalloid", period: 4, group: 15, config: {abbr: "[Ar] 3d¹⁰ 4s² 4p³", full: "[Ne] 3s² 3p⁶ 3d¹⁰ 4s² 4p³"}, density: "5.73 g/cm³", melt: "817 °C", boil: "614 °C (sublimes)", discoverer: "Ancient", state: "Solid", summary: "A toxic, semi-metallic element, with uses in semiconductors and pesticides." },
+            { number: 34, symbol: "Se", name: "Selenium", mass: 78.971, category: "nonmetal", period: 4, group: 16, config: {abbr: "[Ar] 3d¹⁰ 4s² 4p⁴", full: "[Ne] 3s² 3p⁶ 3d¹⁰ 4s² 4p⁴"}, density: "4.81 g/cm³", melt: "221 °C", boil: "685 °C", discoverer: "Jöns Jacob Berzelius", state: "Solid", summary: "A non-metal used in electronics (photovoltaic cells) and in red-colored glass." },
+            { number: 35, symbol: "Br", name: "Bromine", mass: 79.904, category: "halogen", period: 4, group: 17, config: {abbr: "[Ar] 3d¹⁰ 4s² 4p⁵", full: "[Ne] 3s² 3p⁶ 3d¹⁰ 4s² 4p⁵"}, density: "3.1028 g/cm³", melt: "-7.2 °C", boil: "58.8 °C", discoverer: "Antoine Jérôme Balard", state: "Liquid", summary: "A deep red-brown liquid, the only non-metal element that is liquid at room temperature." },
+            { number: 36, symbol: "Kr", name: "Krypton", mass: 83.798, category: "noble-gas", period: 4, group: 18, config: {abbr: "[Ar] 3d¹⁰ 4s² 4p⁶", full: "[Ne] 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶"}, density: "3.749 g/L", melt: "-157.36 °C", boil: "-153.22 °C", discoverer: "William Ramsay", state: "Gas", summary: "A colorless, odorless noble gas used in some types of electric and photographic flash lamps." },
+
+            // Period 5 (Full)
+            { number: 37, symbol: "Rb", name: "Rubidium", mass: 85.468, category: "alkali-metal", period: 5, group: 1, config: {abbr: "[Kr] 5s¹", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 5s¹"}, density: "1.532 g/cm³", melt: "39.31 °C", boil: "688 °C", discoverer: "Robert Bunsen", state: "Solid", summary: "A soft, silvery-white metal that is highly reactive and easily oxidized." },
+            { number: 38, symbol: "Sr", name: "Strontium", mass: 87.62, category: "alkaline-earth", period: 5, group: 2, config: {abbr: "[Kr] 5s²", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 5s²"}, density: "2.64 g/cm³", melt: "777 °C", boil: "1377 °C", discoverer: "Adair Crawford", state: "Solid", summary: "Used in fireworks to give a brilliant red color." },
+            { number: 39, symbol: "Y", name: "Yttrium", mass: 88.906, category: "transition-metal", period: 5, group: 3, config: {abbr: "[Kr] 4d¹ 5s²", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d¹ 5s²"}, density: "4.47 g/cm³", melt: "1522 °C", boil: "3338 °C", discoverer: "Johan Gadolin", state: "Solid", summary: "Used in phosphors for color televisions and LED lights." },
+            { number: 40, symbol: "Zr", name: "Zirconium", mass: 91.224, category: "transition-metal", period: 5, group: 4, config: {abbr: "[Kr] 4d² 5s²", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d² 5s²"}, density: "6.511 g/cm³", melt: "1855 °C", boil: "4377 °C", discoverer: "Martin Heinrich Klaproth", state: "Solid", summary: "Highly resistant to corrosion, used in nuclear reactors." },
+            { number: 41, symbol: "Nb", name: "Niobium", mass: 92.906, category: "transition-metal", period: 5, group: 5, config: {abbr: "[Kr] 4d⁴ 5s¹", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d⁴ 5s¹"}, density: "8.57 g/cm³", melt: "2477 °C", boil: "4744 °C", discoverer: "Charles Hatchett", state: "Solid", summary: "Used in superconducting magnets and high-temperature alloys." },
+            { number: 42, symbol: "Mo", name: "Molybdenum", mass: 95.96, category: "transition-metal", period: 5, group: 6, config: {abbr: "[Kr] 4d⁵ 5s¹", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d⁵ 5s¹"}, density: "10.28 g/cm³", melt: "2623 °C", boil: "4639 °C", discoverer: "Carl Wilhelm Scheele", state: "Solid", summary: "Used in steel alloys to increase strength and corrosion resistance." },
+            { number: 43, symbol: "Tc", name: "Technetium", mass: 98, category: "transition-metal", period: 5, group: 7, config: {abbr: "[Kr] 4d⁵ 5s²", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d⁵ 5s²"}, density: "11 g/cm³", melt: "2157 °C", boil: "4265 °C", discoverer: "Emilio Segrè", state: "Solid", summary: "The lightest element with no stable isotopes; synthetic, used in medical tracers." },
+            { number: 44, symbol: "Ru", name: "Ruthenium", mass: 101.07, category: "transition-metal", period: 5, group: 8, config: {abbr: "[Kr] 4d⁷ 5s¹", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d⁷ 5s¹"}, density: "12.45 g/cm³", melt: "2334 °C", boil: "4150 °C", discoverer: "Karl Ernst Claus", state: "Solid", summary: "A rare transition metal used to harden platinum and palladium." },
+            { number: 45, symbol: "Rh", name: "Rhodium", mass: 102.91, category: "transition-metal", period: 5, group: 9, config: {abbr: "[Kr] 4d⁸ 5s¹", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d⁸ 5s¹"}, density: "12.41 g/cm³", melt: "1964 °C", boil: "3695 °C", discoverer: "William Hyde Wollaston", state: "Solid", summary: "A rare, silvery-white, hard, corrosion-resistant metal, used in catalytic converters." },
+            { number: 46, symbol: "Pd", name: "Palladium", mass: 106.42, category: "transition-metal", period: 5, group: 10, config: {abbr: "[Kr] 4d¹⁰", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d¹⁰"}, density: "12.02 g/cm³", melt: "1554.9 °C", boil: "2963 °C", discoverer: "William Hyde Wollaston", state: "Solid", summary: "Used in catalytic converters, jewelry, and dentistry." },
+            { number: 47, symbol: "Ag", name: "Silver", mass: 107.87, category: "transition-metal", period: 5, group: 11, config: {abbr: "[Kr] 4d¹⁰ 5s¹", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s¹"}, density: "10.49 g/cm³", melt: "961.78 °C", boil: "2162 °C", discoverer: "Ancient", state: "Solid", summary: "Has the highest electrical conductivity of any element." },
+            { number: 48, symbol: "Cd", name: "Cadmium", mass: 112.41, category: "transition-metal", period: 5, group: 12, config: {abbr: "[Kr] 4d¹⁰ 5s²", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s²"}, density: "8.65 g/cm³", melt: "321.07 °C", boil: "767 °C", discoverer: "Friedrich Stromeyer", state: "Solid", summary: "A toxic metal used in batteries and corrosion-resistant plating." },
+            { number: 49, symbol: "In", name: "Indium", mass: 114.82, category: "post-transition", period: 5, group: 13, config: {abbr: "[Kr] 4d¹⁰ 5s² 5p¹", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p¹"}, density: "7.31 g/cm³", melt: "156.6 °C", boil: "2072 °C", discoverer: "Ferdinand Reich", state: "Solid", summary: "A soft, malleable metal, used in touchscreens (ITO)." },
+            { number: 50, symbol: "Sn", name: "Tin", mass: 118.71, category: "post-transition", period: 5, group: 14, config: {abbr: "[Kr] 4d¹⁰ 5s² 5p²", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p²"}, density: "7.26 g/cm³", melt: "231.9 °C", boil: "2602 °C", discoverer: "Ancient", state: "Solid", summary: "Used in many alloys, most notably solders." },
+            { number: 51, symbol: "Sb", name: "Antimony", mass: 121.76, category: "metalloid", period: 5, group: 15, config: {abbr: "[Kr] 4d¹⁰ 5s² 5p³", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p³"}, density: "6.697 g/cm³", melt: "630.6 °C", boil: "1587 °C", discoverer: "Ancient", state: "Solid", summary: "A metalloid used in fire retardants and semiconductors." },
+            { number: 52, symbol: "Te", name: "Tellurium", mass: 127.60, category: "metalloid", period: 5, group: 16, config: {abbr: "[Kr] 4d¹⁰ 5s² 5p⁴", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p⁴"}, density: "6.24 g/cm³", melt: "449.5 °C", boil: "988 °C", discoverer: "Franz-Joseph Müller von Reichenstein", state: "Solid", summary: "Used in solar panels and to increase the ductility of copper." },
+            { number: 53, symbol: "I", name: "Iodine", mass: 126.90, category: "halogen", period: 5, group: 17, config: {abbr: "[Kr] 4d¹⁰ 5s² 5p⁵", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p⁵"}, density: "4.93 g/cm³", melt: "113.7 °C", boil: "184.3 °C", discoverer: "Bernard Courtois", state: "Solid", summary: "Essential nutrient, used as an antiseptic and in iodine lamps." },
+            { number: 54, symbol: "Xe", name: "Xenon", mass: 131.29, category: "noble-gas", period: 5, group: 18, config: {abbr: "[Kr] 4d¹⁰ 5s² 5p⁶", full: "[Ar] 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p⁶"}, density: "5.894 g/L", melt: "-111.8 °C", boil: "-108.1 °C", discoverer: "William Ramsay", state: "Gas", summary: "A heavy, inert gas used in high-efficiency lights and anesthesia." },
+           
+            // Period 6 (Main block)
+            { number: 55, symbol: "Cs", name: "Caesium", mass: 132.91, category: "alkali-metal", period: 6, group: 1, config: {abbr: "[Xe] 6s¹", full: "[Kr] 4d¹⁰ 5s² 5p⁶ 6s¹"}, density: "1.879 g/cm³", melt: "28.5 °C", boil: "671 °C", discoverer: "Robert Bunsen", state: "Solid", summary: "A soft, gold-colored alkali metal that is liquid near room temperature, used in atomic clocks." },
+            { number: 56, symbol: "Ba", name: "Barium", mass: 137.33, category: "alkaline-earth", period: 6, group: 2, config: {abbr: "[Xe] 6s²", full: "[Kr] 4d¹⁰ 5s² 5p⁶ 6s²"}, density: "3.594 g/cm³", melt: "727 °C", boil: "1897 °C", discoverer: "Carl Wilhelm Scheele", state: "Solid", summary: "A soft, silver-white metal used in spark plug electrodes and fluorescent lamps." },
+            { number: 57, symbol: "La", name: "Lanthanum", mass: 138.91, category: "lanthanide", period: 6, group: 3, config: {abbr: "[Xe] 5d¹ 6s²", full: "[Kr] 4d¹⁰ 5s² 5p⁶ 5d¹ 6s²"}, density: "6.162 g/cm³", melt: "920 °C", boil: "3464 °C", discoverer: "Carl Gustaf Mosander", state: "Solid", summary: "The first element of the lanthanide series, silvery-white and malleable." },
+            // 58-71 are the Lanthanides (f-block)
+            { number: 72, symbol: "Hf", name: "Hafnium", mass: 178.49, category: "transition-metal", period: 6, group: 4, config: {abbr: "[Xe] 4f¹⁴ 5d² 6s²", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d² 6s²"}, density: "13.31 g/cm³", melt: "2233 °C", boil: "4603 °C", discoverer: "Dirk Coster", state: "Solid", summary: "A lustrous, silvery metal used in control rods for nuclear submarines." },
+            { number: 73, symbol: "Ta", name: "Tantalum", mass: 180.95, category: "transition-metal", period: 6, group: 5, config: {abbr: "[Xe] 4f¹⁴ 5d³ 6s²", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d³ 6s²"}, density: "16.69 g/cm³", melt: "3017 °C", boil: "5425 °C", discoverer: "Anders Gustaf Ekeberg", state: "Solid", summary: "A rare, hard, blue-gray metal, highly corrosion-resistant, used in surgical implants." },
+            { number: 74, symbol: "W", name: "Tungsten", mass: 183.84, category: "transition-metal", period: 6, group: 6, config: {abbr: "[Xe] 4f¹⁴ 5d⁴ 6s²", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d⁴ 6s²"}, density: "19.25 g/cm³", melt: "3422 °C", boil: "5930 °C", discoverer: "Juan José Elhuyar", state: "Solid", summary: "Has the highest melting point of all elements, used in light bulb filaments." },
+            { number: 75, symbol: "Re", name: "Rhenium", mass: 186.21, category: "transition-metal", period: 6, group: 7, config: {abbr: "[Xe] 4f¹⁴ 5d⁵ 6s²", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d⁵ 6s²"}, density: "21.04 g/cm³", melt: "3186 °C", boil: "5596 °C", discoverer: "Walter Noddack", state: "Solid", summary: "One of the rarest elements, used in high-temperature superalloys for jet engines." },
+            { number: 76, symbol: "Os", name: "Osmium", mass: 190.23, category: "transition-metal", period: 6, group: 8, config: {abbr: "[Xe] 4f¹⁴ 5d⁶ 6s²", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d⁶ 6s²"}, density: "22.59 g/cm³", melt: "3033 °C", boil: "5012 °C", discoverer: "Smithson Tennant", state: "Solid", summary: "The densest naturally occurring element, used in instrument pivots." },
+            { number: 77, symbol: "Ir", name: "Iridium", mass: 192.22, category: "transition-metal", period: 6, group: 9, config: {abbr: "[Xe] 4f¹⁴ 5d⁷ 6s²", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d⁷ 6s²"}, density: "22.56 g/cm³", melt: "2466 °C", boil: "4428 °C", discoverer: "Smithson Tennant", state: "Solid", summary: "The most corrosion-resistant metal, often found in meteorites." },
+            { number: 78, symbol: "Pt", name: "Platinum", mass: 195.08, category: "transition-metal", period: 6, group: 10, config: {abbr: "[Xe] 4f¹⁴ 5d⁹ 6s¹", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d⁹ 6s¹"}, density: "21.45 g/cm³", melt: "1768.3 °C", boil: "3825 °C", discoverer: "Ancient", state: "Solid", summary: "A dense, malleable, ductile, highly unreactive, precious, silver-white transition metal." },
+            { number: 79, symbol: "Au", name: "Gold", mass: 196.97, category: "transition-metal", period: 6, group: 11, config: {abbr: "[Xe] 4f¹⁴ 5d¹⁰ 6s¹", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s¹"}, density: "19.3 g/cm³", melt: "1064.2 °C", boil: "2856 °C", discoverer: "Ancient", state: "Solid", summary: "A soft, dense, malleable, ductile metal, highly valued for its rarity and beauty." },
+            { number: 80, symbol: "Hg", name: "Mercury", mass: 200.59, category: "transition-metal", period: 6, group: 12, config: {abbr: "[Xe] 4f¹⁴ 5d¹⁰ 6s²", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s²"}, density: "13.53 g/cm³", melt: "-38.8 °C", boil: "356.7 °C", discoverer: "Ancient", state: "Liquid", summary: "The only metal that is liquid at standard conditions." },
+            { number: 81, symbol: "Tl", name: "Thallium", mass: 204.38, category: "post-transition", period: 6, group: 13, config: {abbr: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p¹", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p¹"}, density: "11.85 g/cm³", melt: "303.5 °C", boil: "1473 °C", discoverer: "William Crookes", state: "Solid", summary: "A toxic metal, once used in rat poisons and insecticides." },
+            { number: 82, symbol: "Pb", name: "Lead", mass: 207.2, category: "post-transition", period: 6, group: 14, config: {abbr: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p²", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p²"}, density: "11.34 g/cm³", melt: "327.5 °C", boil: "1749 °C", discoverer: "Ancient", state: "Solid", summary: "A heavy, soft, malleable metal, now banned in most paints and gasoline." },
+            { number: 83, symbol: "Bi", name: "Bismuth", mass: 208.98, category: "post-transition", period: 6, group: 15, config: {abbr: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p³", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p³"}, density: "9.78 g/cm³", melt: "271.4 °C", boil: "1564 °C", discoverer: "Claude François Geoffroy", state: "Solid", summary: "The most naturally diamagnetic metal; used in cosmetics and medicines." },
+            { number: 84, symbol: "Po", name: "Polonium", mass: 209, category: "metalloid", period: 6, group: 16, config: {abbr: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁴", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁴"}, density: "9.2 g/cm³", melt: "254 °C", boil: "962 °C", discoverer: "Marie and Pierre Curie", state: "Solid", summary: "Highly radioactive element used as a heat source in space probes." },
+            { number: 85, symbol: "At", name: "Astatine", mass: 210, category: "halogen", period: 6, group: 17, config: {abbr: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁵", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁵"}, density: "7.0 g/cm³", melt: "302 °C", boil: "337 °C", discoverer: "Dale R. Corson", state: "Solid", summary: "The rarest naturally occurring element, highly radioactive." },
+            { number: 86, symbol: "Rn", name: "Radon", mass: 222, category: "noble-gas", period: 6, group: 18, config: {abbr: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁶"}, density: "9.73 g/L", melt: "-71 °C", boil: "-61.7 °C", discoverer: "Ernest Rutherford", state: "Gas", summary: "A naturally occurring radioactive noble gas." },
+
+            // Period 7 (Main block - includes synthetic elements up to 118)
+            { number: 87, symbol: "Fr", name: "Francium", mass: 223, category: "alkali-metal", period: 7, group: 1, config: {abbr: "[Rn] 7s¹", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 7s¹"}, density: "1.87 g/cm³", melt: "27 °C", boil: "677 °C", discoverer: "Marguerite Perey", state: "Solid", summary: "The most unstable element, highly radioactive, with a very short half-life." },
+            { number: 88, symbol: "Ra", name: "Radium", mass: 226, category: "alkaline-earth", period: 7, group: 2, config: {abbr: "[Rn] 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 7s²"}, density: "5.5 g/cm³", melt: "700 °C", boil: "1737 °C", discoverer: "Marie and Pierre Curie", state: "Solid", summary: "A highly radioactive element that decays to form radon gas." },
+            { number: 89, symbol: "Ac", name: "Actinium", mass: 227, category: "actinide", period: 7, group: 3, config: {abbr: "[Rn] 6d¹ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 6d¹ 7s²"}, density: "10.0 g/cm³", melt: "1051 °C", boil: "3200 °C", discoverer: "Friedrich Oskar Giesel", state: "Solid", summary: "A soft, silvery-white radioactive metal, used as a neutron source." },
+            // 90-103 are the Actinides (f-block)
+            { number: 104, symbol: "Rf", name: "Rutherfordium", mass: 267, category: "transition-metal", period: 7, group: 4, config: {abbr: "[Rn] 5f¹⁴ 6d² 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d² 7s²"}, density: "23.2 g/cm³", melt: "2100 °C", boil: "5500 °C", discoverer: "Joint Institute for Nuclear Research", state: "Solid (Synth.)", summary: "A synthetic, highly radioactive element, studied primarily through its chemical properties." },
+            { number: 105, symbol: "Db", name: "Dubnium", mass: 268, category: "transition-metal", period: 7, group: 5, config: {abbr: "[Rn] 5f¹⁴ 6d³ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d³ 7s²"}, density: "39 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Joint Institute for Nuclear Research", state: "Solid (Synth.)", summary: "A synthetic element; research focuses on its chemical properties." },
+            { number: 106, symbol: "Sg", name: "Seaborgium", mass: 271, category: "transition-metal", period: 7, group: 6, config: {abbr: "[Rn] 5f¹⁴ 6d⁴ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d⁴ 7s²"}, density: "35 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Albert Ghiorso", state: "Solid (Synth.)", summary: "Named after American nuclear chemist Glenn T. Seaborg." },
+            { number: 107, symbol: "Bh", name: "Bohrium", mass: 272, category: "transition-metal", period: 7, group: 7, config: {abbr: "[Rn] 5f¹⁴ 6d⁵ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d⁵ 7s²"}, density: "37 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Gesellschaft für Schwerionenforschung", state: "Solid (Synth.)", summary: "Named after Danish physicist Niels Bohr." },
+            { number: 108, symbol: "Hs", name: "Hassium", mass: 270, category: "transition-metal", period: 7, group: 8, config: {abbr: "[Rn] 5f¹⁴ 6d⁶ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d⁶ 7s²"}, density: "41 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Gesellschaft für Schwerionenforschung", state: "Solid (Synth.)", summary: "Named after the German state of Hesse." },
+            { number: 109, symbol: "Mt", name: "Meitnerium", mass: 276, category: "transition-metal", period: 7, group: 9, config: {abbr: "[Rn] 5f¹⁴ 6d⁷ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d⁷ 7s²"}, density: "37 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Gesellschaft für Schwerionenforschung", state: "Solid (Synth.)", summary: "Named after physicist Lise Meitner." },
+            { number: 110, symbol: "Ds", name: "Darmstadtium", mass: 281, category: "transition-metal", period: 7, group: 10, config: {abbr: "[Rn] 5f¹⁴ 6d⁸ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d⁸ 7s²"}, density: "35 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Gesellschaft für Schwerionenforschung", state: "Solid (Synth.)", summary: "Named after the city of Darmstadt, Germany." },
+            { number: 111, symbol: "Rg", name: "Roentgenium", mass: 280, category: "transition-metal", period: 7, group: 11, config: {abbr: "[Rn] 5f¹⁴ 6d⁹ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d⁹ 7s²"}, density: "28 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Gesellschaft für Schwerionenforschung", state: "Solid (Synth.)", summary: "Named after physicist Wilhelm Conrad Röntgen." },
+            { number: 112, symbol: "Cn", name: "Copernicium", mass: 285, category: "transition-metal", period: 7, group: 12, config: {abbr: "[Rn] 5f¹⁴ 6d¹⁰ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d¹⁰ 7s²"}, density: "24 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Gesellschaft für Schwerionenforschung", state: "Liquid (Calc.)", summary: "Named after astronomer Nicolaus Copernicus." },
+            { number: 113, symbol: "Nh", name: "Nihonium", mass: 286, category: "post-transition", period: 7, group: 13, config: {abbr: "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p¹", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d¹⁰ 7s² 7p¹"}, density: "16 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "RIKEN", state: "Solid (Synth.)", summary: "Named after Nihon, the Japanese name for Japan." },
+            { number: 114, symbol: "Fl", name: "Flerovium", mass: 289, category: "post-transition", period: 7, group: 14, config: {abbr: "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d¹⁰ 7s² 7p²"}, density: "14 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Joint Institute for Nuclear Research", state: "Liquid (Calc.)", summary: "Named after physicist Georgy Flyorov." },
+            { number: 115, symbol: "Mc", name: "Moscovium", mass: 290, category: "post-transition", period: 7, group: 15, config: {abbr: "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p³", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d¹⁰ 7s² 7p³"}, density: "13.5 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Joint Institute for Nuclear Research", state: "Solid (Synth.)", summary: "Named after the Moscow region." },
+            { number: 116, symbol: "Lv", name: "Livermorium", mass: 293, category: "post-transition", period: 7, group: 16, config: {abbr: "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁴", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d¹⁰ 7s² 7p⁴"}, density: "12.9 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Joint Institute for Nuclear Research", state: "Solid (Synth.)", summary: "Named after the Lawrence Livermore National Laboratory." },
+            { number: 117, symbol: "Ts", name: "Tennessine", mass: 294, category: "halogen", period: 7, group: 17, config: {abbr: "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁵", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d¹⁰ 7s² 7p⁵"}, density: "7.1 g/cm³ (calc.)", melt: "N/A", boil: "N/A", discoverer: "Joint Institute for Nuclear Research", state: "Solid (Synth.)", summary: "Named after the state of Tennessee." },
+            { number: 118, symbol: "Og", name: "Oganesson", mass: 294, category: "noble-gas", period: 7, group: 18, config: {abbr: "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁶", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d¹⁰ 7s² 7p⁶"}, density: "4.9 g/L (calc.)", melt: "N/A", boil: "N/A", discoverer: "Joint Institute for Nuclear Research", state: "Gas (Calc.)", summary: "Named after physicist Yuri Oganessian." },
+
+            // F-Block: Lanthanides (58-71) and Actinides (90-103)
+            { number: 58, symbol: "Ce", name: "Cerium", mass: 140.12, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f¹ 5d¹ 6s²", full: "[Kr] 4d¹⁰ 4f¹ 5s² 5p⁶ 5d¹ 6s²"}, density: "6.77 g/cm³", melt: "795 °C", boil: "3443 °C", discoverer: "Jöns Jacob Berzelius", state: "Solid", summary: "The most abundant lanthanide, used in catalysts and alloys." },
+            { number: 59, symbol: "Pr", name: "Praseodymium", mass: 140.91, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f³ 6s²", full: "[Kr] 4d¹⁰ 4f³ 5s² 5p⁶ 6s²"}, density: "6.77 g/cm³", melt: "935 °C", boil: "3520 °C", discoverer: "Carl Auer von Welsbach", state: "Solid", summary: "Used to color glass and make powerful permanent magnets." },
+            { number: 60, symbol: "Nd", name: "Neodymium", mass: 144.24, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f⁴ 6s²", full: "[Kr] 4d¹⁰ 4f⁴ 5s² 5p⁶ 6s²"}, density: "7.01 g/cm³", melt: "1021 °C", boil: "3074 °C", discoverer: "Carl Auer von Welsbach", state: "Solid", summary: "Used in the world's strongest permanent magnets." },
+            { number: 61, symbol: "Pm", name: "Promethium", mass: 145, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f⁵ 6s²", full: "[Kr] 4d¹⁰ 4f⁵ 5s² 5p⁶ 6s²"}, density: "7.26 g/cm³", melt: "1042 °C", boil: "3000 °C", discoverer: "Jack A. Marinsky", state: "Solid (Synth.)", summary: "The only radioactive lanthanide, used in luminous paints." },
+            { number: 62, symbol: "Sm", name: "Samarium", mass: 150.36, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f⁶ 6s²", full: "[Kr] 4d¹⁰ 4f⁶ 5s² 5p⁶ 6s²"}, density: "7.52 g/cm³", melt: "1072 °C", boil: "1794 °C", discoverer: "Lecoq de Boisbaudran", state: "Solid", summary: "Used in powerful magnets and control rods of nuclear reactors." },
+            { number: 63, symbol: "Eu", name: "Europium", mass: 151.96, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f⁷ 6s²", full: "[Kr] 4d¹⁰ 4f⁷ 5s² 5p⁶ 6s²"}, density: "5.24 g/cm³", melt: "822 °C", boil: "1529 °C", discoverer: "Eugène-Anatole Demarçay", state: "Solid", summary: "Known for its use in red phosphors for television screens." },
+            { number: 64, symbol: "Gd", name: "Gadolinium", mass: 157.25, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f⁷ 5d¹ 6s²", full: "[Kr] 4d¹⁰ 4f⁷ 5s² 5p⁶ 5d¹ 6s²"}, density: "7.90 g/cm³", melt: "1313 °C", boil: "3273 °C", discoverer: "Jean Charles Galissard de Marignac", state: "Solid", summary: "Used in MRI contrast agents and neutron shielding." },
+            { number: 65, symbol: "Tb", name: "Terbium", mass: 158.93, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f⁹ 6s²", full: "[Kr] 4d¹⁰ 4f⁹ 5s² 5p⁶ 6s²"}, density: "8.23 g/cm³", melt: "1359 °C", boil: "3230 °C", discoverer: "Carl Gustaf Mosander", state: "Solid", summary: "Used in green phosphors for TV screens." },
+            { number: 66, symbol: "Dy", name: "Dysprosium", mass: 162.50, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f¹⁰ 6s²", full: "[Kr] 4d¹⁰ 4f¹⁰ 5s² 5p⁶ 6s²"}, density: "8.54 g/cm³", melt: "1407 °C", boil: "2567 °C", discoverer: "Paul Émile Lecoq de Boisbaudran", state: "Solid", summary: "Used in magnetostrictive materials (Terfenol-D)." },
+            { number: 67, symbol: "Ho", name: "Holmium", mass: 164.93, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f¹¹ 6s²", full: "[Kr] 4d¹⁰ 4f¹¹ 5s² 5p⁶ 6s²"}, density: "8.79 g/cm³", melt: "1474 °C", boil: "2700 °C", discoverer: "Per Teodor Cleve", state: "Solid", summary: "Has the highest magnetic moment of any natural element." },
+            { number: 68, symbol: "Er", name: "Erbium", mass: 167.26, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f¹² 6s²", full: "[Kr] 4d¹⁰ 4f¹² 5s² 5p⁶ 6s²"}, density: "9.07 g/cm³", melt: "1529 °C", boil: "2868 °C", discoverer: "Carl Gustaf Mosander", state: "Solid", summary: "Used as a pink colorant in glass and porcelain." },
+            { number: 69, symbol: "Tm", name: "Thulium", mass: 168.93, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f¹³ 6s²", full: "[Kr] 4d¹⁰ 4f¹³ 5s² 5p⁶ 6s²"}, density: "9.32 g/cm³", melt: "1545 °C", boil: "1950 °C", discoverer: "Per Teodor Cleve", state: "Solid", summary: "The least abundant rare-earth element." },
+            { number: 70, symbol: "Yb", name: "Ytterbium", mass: 173.05, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f¹⁴ 6s²", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 6s²"}, density: "6.90 g/cm³", melt: "819 °C", boil: "1196 °C", discoverer: "Jean Charles Galissard de Marignac", state: "Solid", summary: "Used in fiber optic cables and high-precision strain gauges." },
+            { number: 71, symbol: "Lu", name: "Lutetium", mass: 174.97, category: "lanthanide", period: 6, group: 'L*', config: {abbr: "[Xe] 4f¹⁴ 5d¹ 6s²", full: "[Kr] 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹ 6s²"}, density: "9.84 g/cm³", melt: "1663 °C", boil: "3402 °C", discoverer: "Georges Urbain", state: "Solid", summary: "Used in LED light bulbs and high-refractive index glasses." },
+
+            // F-Block: Actinides (90-103)
+            { number: 90, symbol: "Th", name: "Thorium", mass: 232.04, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 6d² 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 6d² 7s²"}, density: "11.7 g/cm³", melt: "1750 °C", boil: "4788 °C", discoverer: "Jöns Jacob Berzelius", state: "Solid", summary: "A weakly radioactive metal once used in gas lantern mantles." },
+            { number: 91, symbol: "Pa", name: "Protactinium", mass: 231.04, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f² 6d¹ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f² 6d¹ 7s²"}, density: "15.4 g/cm³", melt: "1568 °C", boil: "4027 °C", discoverer: "Kazimierz Fajans", state: "Solid", summary: "A highly toxic and radioactive element, rare in nature." },
+            { number: 92, symbol: "U", name: "Uranium", mass: 238.03, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f³ 6d¹ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f³ 6d¹ 7s²"}, density: "19.1 g/cm³", melt: "1135 °C", boil: "4131 °C", discoverer: "Martin Heinrich Klaproth", state: "Solid", summary: "Used as fuel in nuclear power plants and for nuclear weapons." },
+            { number: 93, symbol: "Np", name: "Neptunium", mass: 237, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f⁴ 6d¹ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f⁴ 6d¹ 7s²"}, density: "20.45 g/cm³", melt: "637 °C", boil: "4030 °C", discoverer: "Edwin McMillan", state: "Solid (Synth.)", summary: "The first transuranium element synthesized, highly radioactive." },
+            { number: 94, symbol: "Pu", name: "Plutonium", mass: 244, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f⁶ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f⁶ 7s²"}, density: "19.816 g/cm³", melt: "640 °C", boil: "3228 °C", discoverer: "Glenn T. Seaborg", state: "Solid (Synth.)", summary: "Used in nuclear reactors and weapons, known for its high density." },
+            { number: 95, symbol: "Am", name: "Americium", mass: 243, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f⁷ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f⁷ 7s²"}, density: "13.67 g/cm³", melt: "1173 °C", boil: "2607 °C", discoverer: "Glenn T. Seaborg", state: "Solid (Synth.)", summary: "Used in smoke detectors and is highly radioactive." },
+            { number: 96, symbol: "Cm", name: "Curium", mass: 247, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f⁷ 6d¹ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f⁷ 6d¹ 7s²"}, density: "13.51 g/cm³", melt: "1340 °C", boil: "3100 °C", discoverer: "Glenn T. Seaborg", state: "Solid (Synth.)", summary: "Used in radioisotope thermoelectric generators (RTGs)." },
+            { number: 97, symbol: "Bk", name: "Berkelium", mass: 247, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f⁹ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f⁹ 7s²"}, density: "14.78 g/cm³", melt: "986 °C", boil: "2900 °C", discoverer: "Glenn T. Seaborg", state: "Solid (Synth.)", summary: "A highly radioactive element synthesized in 1949." },
+            { number: 98, symbol: "Cf", name: "Californium", mass: 251, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f¹⁰ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁰ 7s²"}, density: "15.1 g/cm³", melt: "900 °C", boil: "1745 °C", discoverer: "Glenn T. Seaborg", state: "Solid (Synth.)", summary: "A powerful neutron emitter, used to start up nuclear reactors." },
+            { number: 99, symbol: "Es", name: "Einsteinium", mass: 252, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f¹¹ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹¹ 7s²"}, density: "8.84 g/cm³", melt: "860 °C", boil: "996 °C", discoverer: "Lawrence Berkeley National Laboratory", state: "Solid (Synth.)", summary: "Discovered in the debris of the first hydrogen bomb explosion." },
+            { number: 100, symbol: "Fm", name: "Fermium", mass: 257, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f¹² 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹² 7s²"}, density: "9.7 g/cm³", melt: "1527 °C", boil: "N/A", discoverer: "Lawrence Berkeley National Laboratory", state: "Solid (Synth.)", summary: "The heaviest element that can be formed by neutron bombardment." },
+            { number: 101, symbol: "Md", name: "Mendelevium", mass: 258, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f¹³ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹³ 7s²"}, density: "10.3 g/cm³", melt: "827 °C", boil: "N/A", discoverer: "Glenn T. Seaborg", state: "Solid (Synth.)", summary: "Named after Dmitri Mendeleev, the creator of the periodic table." },
+            { number: 102, symbol: "No", name: "Nobelium", mass: 259, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f¹⁴ 7s²", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 7s²"}, density: "9.9 g/cm³", melt: "827 °C", boil: "N/A", discoverer: "Joint Institute for Nuclear Research", state: "Solid (Synth.)", summary: "Named after Alfred Nobel." },
+            { number: 103, symbol: "Lr", name: "Lawrencium", mass: 262, category: "actinide", period: 7, group: 'A*', config: {abbr: "[Rn] 5f¹⁴ 7s² 7p¹", full: "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 7s² 7p¹"}, density: "15.6 g/cm³", melt: "1627 °C", boil: "N/A", discoverer: "Albert Ghiorso", state: "Solid (Synth.)", summary: "Named after Ernest Lawrence, the inventor of the cyclotron." },
+        ];
+       
+        // Function to map category strings to Tailwind CSS classes
+        function getCategoryColor(category) {
+            const map = {
+                // Only provide border and text color for OLED effect (background is black)
+                'alkali-metal': 'border-alkali-metal text-alkali-metal',
+                'alkaline-earth': 'border-alkaline-earth text-alkaline-earth',
+                'transition-metal': 'border-transition-metal text-transition-metal',
+                'post-transition': 'border-post-transition text-post-transition',
+                'metalloid': 'border-metalloid text-metalloid',
+                'nonmetal': 'border-nonmetal text-nonmetal',
+                'halogen': 'border-halogen text-halogen',
+                'noble-gas': 'border-noble-gas text-noble-gas',
+                'lanthanide': 'border-lanthanide text-lanthanide',
+                'actinide': 'border-actinide text-actinide',
+            };
+            return map[category] || 'border-unknown text-unknown';
+        }
+
+        // Function to get the glow color (used in CSS dynamic var)
+        function getCategoryGlowColor(category) {
+            // Mapping to the hex values defined in tailwind.config
+            const map = {
+                'alkali-metal': '#FF6B6B',
+                'alkaline-earth': '#FFA500',
+                'transition-metal': '#FFD700',
+                'post-transition': '#3CB371',
+                'metalloid': '#6A5ACD',
+                'nonmetal': '#4682B4',
+                'halogen': '#00CED1',
+                'noble-gas': '#DA70D6',
+                'lanthanide': '#90EE90',
+                'actinide': '#BA55D3',
+            };
+            return map[category] || '#5A5A5A';
+        }
+
+        // Helper to create an empty grid cell
+        function createEmptyCell(colStart, row) {
+            const cell = document.createElement('div');
+            cell.className = 'empty-cell';
+            cell.style.gridColumn = colStart;
+            cell.style.gridRow = row;
+            return cell;
+        }
+
+        // Helper to create the Lanthanide/Actinide break placeholder
+        function createPlaceholder(text, row, colStart) {
+            const cell = document.createElement('div');
+            cell.className = 'placeholder-cell';
+            cell.style.gridColumn = `${colStart}`;
+            cell.style.gridRow = `${row}`;
+            cell.textContent = text;
+            cell.classList.add('flex', 'justify-center', 'items-center', 'font-bold', 'text-sm', 'text-gray-500');
+            return cell;
+        }
+
+        // Function to create the element cell HTML
+        function createElementCell(element) {
+            const { number, symbol, name, category, mass, period, group } = element;
+            const colorClass = getCategoryColor(category);
+            const glowColor = getCategoryGlowColor(category);
+
+            // Calculate grid position
+            let col, row;
+            if (group === 'L*' || group === 'A*') {
+                // F-block elements are placed in row 9 (Lanthanides) and 10 (Actinides), starting at column 4
+                const baseNumber = category === 'lanthanide' ? 58 : 90;
+                col = 4 + (number - baseNumber);
+                row = category === 'lanthanide' ? 9 : 10;
+            } else {
+                col = group;
+                row = period;
+            }
+
+            const cell = document.createElement('div');
+            // Element cell is black background, border color is category color
+            cell.className = `element-cell ${colorClass}`;
+            cell.style.gridColumn = col;
+            cell.style.gridRow = row;
+            cell.setAttribute('data-number', number);
+            // Set CSS variable for the glow and box-shadow color
+            cell.style.setProperty('--element-glow-color', glowColor);
+           
+            // Add click listener to show modal
+            cell.addEventListener('click', () => showModal(element));
+
+            // Inner HTML structure
+            cell.innerHTML = `
+                <div class="element-glow" style="background-color: ${glowColor};"></div>
+                <div class="element-number">${number}</div>
+                <div class="element-symbol">${symbol}</div>
+                <div class="element-mass text-right">${mass ? mass.toFixed(3) : "—"}</div>
+                <div class="element-name">${name}</div>
+            `;
+           
+            return cell;
+        }
+
+        // Main function to build the table
+        function buildPeriodicTable() {
+            const grid = document.getElementById('periodic-table-grid');
+            grid.innerHTML = '';
+           
+            // 1. Insert Group Headers (1 to 18)
+            for (let i = 1; i <= 18; i++) {
+                const header = document.createElement('div');
+                header.className = 'text-gray-600 font-bold text-xs text-center aspect-square flex items-center justify-center';
+                header.style.gridColumn = i;
+                header.style.gridRow = 1;
+                header.textContent = i;
+                grid.appendChild(header);
+            }
+
+            // 2. Insert Period Headers (1 to 7)
+            for (let i = 1; i <= 7; i++) {
+                const header = document.createElement('div');
+                header.className = 'text-gray-600 font-bold text-xs text-center aspect-square flex items-center justify-center';
+                header.style.gridColumn = 1;
+                header.style.gridRow = i + 1; // Start from row 2 (below group headers)
+                header.textContent = i;
+                grid.appendChild(header);
+            }
+
+            // 3. Insert Empty Cells for the main table structure
+            // H -> He gap (Cols 2-17, Row 2)
+            for (let i = 2; i <= 17; i++) {
+                grid.appendChild(createEmptyCell(i, 2));
+            }
+            // Li/Be -> B/C gap (Cols 3-12, Rows 3-4)
+            for (let r = 3; r <= 4; r++) {
+                for (let c = 3; c <= 12; c++) {
+                    grid.appendChild(createEmptyCell(c, r));
+                }
+            }
+           
+            // 4. Insert Lanthanide/Actinide Placeholder Markers (in Group 3)
+            grid.appendChild(createPlaceholder('57-71', 7, 3)); // La to Lu
+            grid.appendChild(createPlaceholder('89-103', 8, 3)); // Ac to Lr
+
+            // 5. Insert all elements
+            elementsData.forEach(element => {
+                grid.appendChild(createElementCell(element));
+            });
+
+            // 6. Insert F-Block headers
+            const fBlockHeaderL = document.createElement('div');
+            fBlockHeaderL.className = 'placeholder-cell text-sm text-gray-600 font-bold';
+            fBlockHeaderL.style.gridColumn = '1 / span 3';
+            fBlockHeaderL.style.gridRow = '9';
+            fBlockHeaderL.textContent = 'Lanthanides (58-71)';
+            grid.appendChild(fBlockHeaderL);
+           
+            const fBlockHeaderA = document.createElement('div');
+            fBlockHeaderA.className = 'placeholder-cell text-sm text-gray-600 font-bold';
+            fBlockHeaderA.style.gridColumn = '1 / span 3';
+            fBlockHeaderA.style.gridRow = '10';
+            fBlockHeaderA.textContent = 'Actinides (90-103)';
+            grid.appendChild(fBlockHeaderA);
+        }
+
+        // --- Modal Logic ---
+
+        const modal = document.getElementById('element-modal');
+        const modalContent = document.getElementById('modal-content');
+       
+        // Function to display the modal with element data
+        function showModal(element) {
+            // Get the element's color for the modal card border and shadow
+            const elementColor = getCategoryGlowColor(element.category);
+            const categoryText = element.category.replace(/-/g, ' ');
+
+            // Populate Modal Content
+            document.getElementById('modal-symbol').textContent = element.symbol;
+            document.getElementById('modal-name').textContent = element.name;
+            document.getElementById('modal-number').textContent = element.number;
+            document.getElementById('modal-mass').textContent = element.mass ? element.mass.toFixed(4) : "—";
+            document.getElementById('modal-category').textContent = categoryText;
+            document.getElementById('modal-density').textContent = element.density || "N/A";
+            document.getElementById('modal-melt').textContent = element.melt || "N/A";
+            document.getElementById('modal-boil').textContent = element.boil || "N/A";
+           
+            // Electron Configurations
+            document.getElementById('modal-config-abbr').textContent = element.config.abbr || "N/A";
+            document.getElementById('modal-config-full').textContent = element.config.full || "N/A";
+
+            document.getElementById('modal-discoverer').textContent = element.discoverer || "Unknown";
+            document.getElementById('modal-state').textContent = element.state || "Unknown";
+            document.getElementById('modal-summary').textContent = element.summary || "No summary available.";
+
+            // Apply a strong border and subtle shadow to the main card based on element color
+            const mainCard = document.getElementById('modal-main-card');
+            mainCard.style.borderColor = elementColor;
+            mainCard.style.boxShadow = `0 0 20px 0px ${elementColor}99`; // Glowing effect on the modal card
+           
+            // Show Modal with transition
+            modal.classList.remove('hidden', 'opacity-0');
+            modal.classList.add('flex');
+            document.body.classList.add('modal-open'); // Prevent body scrolling
+
+            // Trigger transition
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+            }, 10);
+        }
+
+        // Function to hide the modal
+        function closeModal(event) {
+            if (event && event.target !== modal) return;
+
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            document.body.classList.remove('modal-open');
+
+            // Wait for transition to finish before hiding
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }, 500);
+        }
+
+        // Initialize the table on load
+        window.onload = buildPeriodicTable;
+    </script>
+</body>
+</html>```
